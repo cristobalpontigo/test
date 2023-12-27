@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Votación</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="js/formValidation.js"></script>
+    <script src="js/regioncomuna.js"></script>
+    <script src="js/votanteRegistration.js"></script>
+    <script src="js/main.js"></script>
+    
+</head>
+<body>
+    <form id="miFormulario" >
+
+        <table>
+            <tr>
+                <td>
+                    <label for="nombreApellido">Nombre y Apellido:</label>
+                    <input type="text" id="nombreApellido" name="nombreApellido" required style="margin-left: 10px;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="alias">Alias:</label>
+                    <input type="text" id="alias" name="alias" required style="margin-left: 100px;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="rut">RUT:</label>
+                    <input type="text" id="rut" name="rut" required style="margin-left: 102px;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required style="margin-left: 95px;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="region">Región:</label>
+                    <select id="region" name="region"  style="margin-left: 86px; width: 179px;">
+                       
+
+
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="comuna">Comuna:</label>
+                    <select id="comuna" name="comuna" style="margin-left: 78px; width: 179px;">
+                       
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="candidato">Candidato:</label>
+                    <select id="candidato" name="candidato" style="margin-left: 68px; width: 179px;">
+                       
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Como se enteró de Nosotros:</label><br>
+                    <input type="checkbox" name="mediosSeleccionados[]" value="Sitio Web"> Sitio Web
+                    <input type="checkbox" name="mediosSeleccionados[]" value="Tv"> Tv
+                    <input type="checkbox" name="mediosSeleccionados[]" value="Amigos"> Amigos
+                    <input type="checkbox" name="mediosSeleccionados[]" value="Redes Sociales"> Redes Sociales
+
+                    
+                </td>
+            </tr>
+        </table>
+
+        <button type="submit">Enviar Voto</button>
+    </form>
+
+
+
+</body>
+</html>
