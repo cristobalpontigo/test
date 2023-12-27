@@ -1,0 +1,46 @@
+PHP Version => 7.4.30
+10.4.25-MariaDB
+
+
+HTML (index.html):
+Página HTML básica:
+Define una página HTML con un formulario para registrar votos y una sección para mostrar los resultados actuales.
+JavaScript (script.js):
+Carga inicial:
+
+Cuando la página se carga, se llama a la función obtenerResultados() para mostrar los resultados actuales.
+Función obtenerResultados():
+
+Utiliza AJAX (Asynchronous JavaScript and XML) para hacer una solicitud al servidor (a través de obtener_resultados.php) y obtener los resultados actuales de la base de datos.
+Llama a la función mostrarResultados(data) para mostrar los resultados obtenidos en la página.
+Función mostrarResultados(resultados):
+
+Toma los resultados recibidos del servidor y los muestra en la sección designada de la página.
+Función registrarVoto():
+
+Obtiene los datos del formulario (nombre y voto).
+Utiliza AJAX para enviar estos datos al servidor (a través de registrar_voto.php) para que se registre el voto en la base de datos.
+Después de registrar el voto con éxito, llama a la función obtenerResultados() para actualizar los resultados en la página.
+PHP (obtener_resultados.php):
+Conexión a la base de datos:
+
+Contiene la lógica para conectarse a la base de datos (que deberías completar con tus propias credenciales y detalles de conexión).
+Consulta SQL:
+
+Ejecuta una consulta SQL para obtener los resultados actuales de la tabla de votos.
+Devuelve resultados como JSON:
+
+Devuelve los resultados como una respuesta JSON, que será procesada por la función mostrarResultados(data) en el lado del cliente.
+PHP (registrar_voto.php):
+Conexión a la base de datos:
+
+Contiene la lógica para conectarse a la base de datos (que deberías completar con tus propias credenciales y detalles de conexión).
+Recibe datos del cliente:
+
+Recibe los datos del cliente (nombre y voto) a través de la solicitud POST.
+Registra el voto en la base de datos:
+
+Ejecuta una consulta SQL para registrar el voto en la base de datos.
+Devuelve una respuesta JSON:
+
+Devuelve una respuesta JSON indicando el éxito del registro del voto, que será procesada por la función registrarVoto() en el lado del cliente.
